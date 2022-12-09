@@ -246,3 +246,94 @@ buyApple(money);
 // };
 
 // reverseArray(data, 0, data.length -1);
+
+//TODO EPISODE 15 - 16
+//TODO https://www.youtube.com/watch?v=exPKDGVsi6g&list=PL8p2I9GklV47TMMnPzqnkCtSOS3ebr4O7&index=15&ab_channel=CodeStepByStep
+//TODO https://www.youtube.com/watch?v=hMa16WdvDI4&list=PL8p2I9GklV47TMMnPzqnkCtSOS3ebr4O7&index=16&ab_channel=CodeStepByStep
+//! Stack Data structure in JavaScript
+// this is linear DAS it means consecutive elements ek ke bad ek elements
+//array me hm sb kahi pe elements add or remove kr skte h pr stack ke sath nhi hota hai
+// STACK me top se hi element remove or add kr sakte h FILO(first come/in last out) / LIFO
+// In stack and quey we have to fixed the size of elements
+// OPERATION:-  pop and push / isEmpty peek:- GET THE TOPMOST ITEM
+// there are two way to implement STACK   1)USING ARRAY    2)USING LINKED LIST
+
+//! PROS: easy to implement.Memory is saved as pointers are not invoked.
+//! CONS: It is not dynamic. it does not grow and shrink depending on need  at runtime
+
+
+//TODO BELOW CODE WE ARE USING THE ARRAY TO BUILD THE STACK
+let arrayData1 = [];
+let currentSizeOfArray =  arrayData1.length;
+let maxVal = 5;
+const pushData = (newValues) => {
+    // let e1 = document.getElementById('arrayElement').value;
+    newValues = document.getElementById('arrayElement').value;
+    console.log('--newValues--', newValues);
+    //! HERE WE ARE DOING OVERFLOW CONDITION
+    if(currentSizeOfArray <= maxVal) {
+        arrayData1[currentSizeOfArray] = newValues;
+        currentSizeOfArray += 1;
+    } else {
+        alert('STACK LIMITATION IS FILL  ------  ' + newValues)
+    }
+    console.log(`----- Array----- ${arrayData1} </br>`);
+    // document.write(`----- Array----- ${arrayData1} </br>`);
+}
+const popData = () => {
+    //! HERE IS UNDERFLOW CONDITION means we are checking data is there or not 
+    if(currentSizeOfArray > 0) {
+        currentSizeOfArray -= 1;
+        arrayData1.length = currentSizeOfArray
+    } else {
+        alert('STACK IS ALREADY EMPTY ----- ');
+    }
+    console.log(`----- Array----- ${arrayData1} </br>`);
+    // document.write(`----- Array----- ${arrayData1} </br>`);
+}
+
+const displayArray = () => {
+    for(let i=0; i< arrayData1.length; i++)
+    {
+        // document.write(`----- Array----- ${arrayData1}`);
+        console.log('----- Array-----', arrayData1);
+    }
+}
+// document.write(`----- Array----- ${arrayData1} </br>`);
+console.warn('--STACK data--', arrayData1);
+
+
+//! TOPICS:-  Reverse String with Stack in JavaScript
+//TODO EPISODE 17: https://www.youtube.com/watch?v=iXxHiad2uI4&list=PL8p2I9GklV47TMMnPzqnkCtSOS3ebr4O7&index=17&ab_channel=CodeStepByStep`
+
+
+let sizeOfArray =  arrayData1.length;
+const maxSizeOfArray = 5
+const stringArrayPush = (item) => {
+    if(sizeOfArray < maxSizeOfArray) {
+        arrayData1[sizeOfArray] = item;
+        sizeOfArray += 1;
+        // console.log('--arrayData1---', arrayData1);
+    }
+    console.warn('--item--', item);
+}
+const stringArrayPop = () => {
+    if(sizeOfArray > 0) {
+        sizeOfArray -= 1;
+        arrayData1.length = sizeOfArray;
+    }
+}
+
+const reverseArrayString = () => {
+    
+}
+stringArrayPush(20);
+stringArrayPush(21);
+stringArrayPush(22);
+stringArrayPush(23);
+stringArrayPop();
+stringArrayPop();
+stringArrayPop();
+console.log('------arrayData1-------', arrayData1);
+
+
