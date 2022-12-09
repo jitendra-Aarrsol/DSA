@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <br>
+    <h1>Which Element U want to Display From First Array</h1>
+    <input type="number" id="element" />
+    <button onclick="arrayTraversing()">Get Array Values </button>
+    <!-- INSERT number at last positions -->
+    <br><h1>If u want INSERT any array please Enter at last positions</h1><br>
+    <input type="number" id="element1" />
+    <button onclick="arrayInsert()">Insert array </button>
+    
+    <!-- INSERT number at any positions -->
+    <br> <h1>INSERT number at any positions of Array</h1><br>
+    Insert positions<input type="number" id="positions">
+    Insert Values <input type="number" id="newElement">
+    <button onclick="arrayInsertAtAnyPosition()">Insert Array</button>
+
+    <!-- REMOVE element form array -->
+    <br> <h1>REMOVE element in Array</h1><br>
+    Insert positions<input type="number" id="removePositions">
+    <button onclick="removeArray()">Remove Array</button>
+
+    <!-- LINEAR SEARCH Element in Array -->
+    <br><h1>LINEAR SEARCH Element in Array</h1><br>
+    Which Item want to search<input type="number" id="searchItem">
+    <button onclick="arraySearch()">Search Item</button>
+
+
+    <!-- MERGE two Array  -->
+    <br><h1>MERGE two Element Array</h1><br>
+    <button onclick="mergeArray()">Merge Array</button>
+
+
+    <!-- MERGE two array using while loop -->
+    <br><h1>MERGE two array using while loop</h1><br>
+    <button onclick="mergedArrayWithWhile()">Merge Array using while loop</button>
+
+    <!-- MERGE two array using while loop -->
+    <br><h1>Bubble Sort</h1><br>
+    <button onclick="sortingWithBubbleSort()">Bubble Sort</button>
+</body>
+</html>
