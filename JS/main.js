@@ -247,6 +247,10 @@ buyApple(money);
 
 // reverseArray(data, 0, data.length -1);
 
+
+
+
+
 //TODO EPISODE 15 - 16
 //TODO https://www.youtube.com/watch?v=exPKDGVsi6g&list=PL8p2I9GklV47TMMnPzqnkCtSOS3ebr4O7&index=15&ab_channel=CodeStepByStep
 //TODO https://www.youtube.com/watch?v=hMa16WdvDI4&list=PL8p2I9GklV47TMMnPzqnkCtSOS3ebr4O7&index=16&ab_channel=CodeStepByStep
@@ -315,25 +319,103 @@ const stringArrayPush = (item) => {
         sizeOfArray += 1;
         // console.log('--arrayData1---', arrayData1);
     }
-    console.warn('--item--', item);
+    // console.warn('--item--', item);
 }
 const stringArrayPop = () => {
-    if(sizeOfArray > 0) {
+    // if(sizeOfArray > 0) {
+        lastRemoveItem = arrayData1[sizeOfArray-1];
         sizeOfArray -= 1;
         arrayData1.length = sizeOfArray;
+        return lastRemoveItem;
+    // }
+}
+
+const reverseArrayString = (item) => {
+    for(let i = 0; i < item.length; i++) {
+        stringArrayPush(item[i]);
+    }
+    for(let i = 0; i < item.length; i++) {
+        //! NOTE:- jab v call by reference use krte h tho data always object or array hona chahiye
+        //TODO call by reference kya hota h?
+        //? CALL BY REFERENCE:- issme ek variable ko re-assigN kiya jata h using function call HERE ITEM HAS RE-ASSIGN  
+        // console.log('-----items-----', stringArrayPop());
+        item[i] = stringArrayPop();
+    }
+}
+let str = 'jitu';
+//! NOTE:- here we are converting the string into array
+str = str.split('');
+console.log('--before reverse str---', str);
+reverseArrayString(str);
+//! with the help of join method we are converting array to string
+console.log('--after reverse str---', str.join(''));
+// stringArrayPush(20);
+// stringArrayPush(21);
+// stringArrayPush(22);
+stringArrayPush(23);
+stringArrayPop();
+// stringArrayPop();
+// stringArrayPop();
+console.log('------arrayData1-------', arrayData1);
+
+
+
+//!  Queue in JavaScript 
+//? EPISODE 19
+// linear data structure that is open at both ends and the operations are performed in First In First Out (FIFO) order. 
+// We define a queue to be a list in which all additions to the list are made at one end, and all deletions from the list are made at the other end. 
+//head/front:=>    ENQUEUE       rear/tail/back:=>  DEQUEUE
+//TODO which default method is used for dequeue
+//? ANS:- 
+const enqueue = (newVal) => {
+    console.log('===    newVal  ===', newVal);
+    if(maxSizeOfArray > currentSizeOfArray) {
+        arrayData1[currentSizeOfArray] = newVal;
+        currentSizeOfArray ++;
+    } else {
+        alert('queue is full')
+    }
+    console.log('=== arrayData1 ==', arrayData1);
+    console.log('=== currentSizeOfArray ==', currentSizeOfArray);
+}
+
+const dequeue = () => {
+    for(let i =0; i< arrayData1.length; i++){
+        arrayData1[i] = arrayData1[i+1];
+    }
+    currentSizeOfArray --;
+    arrayData1.length = currentSizeOfArray;
+    console.log('=== arrayData1 ==', arrayData1);
+}
+
+
+//TODO 20 EPISODE:- https://www.youtube.com/watch?v=Ao2VwQSy8zY&list=PL8p2I9GklV47TMMnPzqnkCtSOS3ebr4O7&index=23&ab_channel=CodeStepByStep
+
+const front = () => {
+    if(!isEmpty()){
+        console.log('front  =====  arrayData1', arrayData1[0]);
+    } else {
+        alert('queue is empty')
     }
 }
 
-const reverseArrayString = () => {
-    
+const rear = () => {
+    if(currentSizeOfArray > 0){
+        console.log('rear   =====  arrayData1', arrayData1[currentSizeOfArray - 1]);
+    } else {
+        alert('queue is empty')
+    }
 }
-stringArrayPush(20);
-stringArrayPush(21);
-stringArrayPush(22);
-stringArrayPush(23);
-stringArrayPop();
-stringArrayPop();
-stringArrayPop();
-console.log('------arrayData1-------', arrayData1);
 
+const isEmpty = () => {
+    console.log('===    currentSizeOfArray  ===', currentSizeOfArray)
+    if(currentSizeOfArray <= 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+//! Circular Queue
+//TODO 21-EPISODE:- https://www.youtube.com/watch?v=wdZZyIt3ELk&list=PL8p2I9GklV47TMMnPzqnkCtSOS3ebr4O7&index=21&ab_channel=CodeStepByStep
 
