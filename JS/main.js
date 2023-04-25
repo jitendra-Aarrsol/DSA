@@ -94,6 +94,7 @@ const removeArray = () => {
 //TODO shortcut of search element (Default Function)
 //? ANS:- indexof()
 
+//* LINER SEARCH ALGORITHM
 const arraySearch = () => {
     let searchItem = document.getElementById('searchItem').value;
     let searchItem1 = parseInt(searchItem);
