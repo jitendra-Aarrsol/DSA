@@ -10,4 +10,4 @@ const checkPrimeNo = (n) => {
     if(i === n) return console.log(`${n} is prime No`)
 }
 
-checkPrimeNo(7)
+checkPrimeNo(4)
