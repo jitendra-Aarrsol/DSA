@@ -30,7 +30,7 @@ const fun = (arr) => {
             }
         }
     }
-    console.log('==BUBBLE SORTED ARRAY', arr)
+    console.log('==INSERTION SORTED ARRAY', arr)
 }
 
 
