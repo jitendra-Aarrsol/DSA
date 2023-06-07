@@ -22,24 +22,25 @@ function isPalindrome(str) {
     if (str.length <= 1) {
         return true;
     }
-
-    let left = 0;
-    let right = str.length - 1;
+    
+    //% This is binary search
+    let start = 0;
+    let end = str.length - 1;
 
     // Compare characters from the beginning and end of the string
-    while (left < right) {
-        if (str[left] !== str[right]) {
+    while (start < end) {
+        if (str[start] !== str[end]) {
             return false;
         }
-        left++;
-        right--;
+        start++;
+        end--;
     }
 
     return true;
 }
 
 // Example usage
-console.log(isPalindrome("level"));    // Output: true
+console.log(isPalindrome("MALAYALAM"));    // Output: true
 console.log(isPalindrome("hello"));    // Output: false
-console.log(isPalindrome("A man, a plan, a canal: Panama"));    // Output: true
-console.log(isPalindrome("A"));    // Output: true
+// console.log(isPalindrome("A man, a plan, a canal: Panama"));    // Output: true
+// console.log(isPalindrome("A"));    // Output: true
