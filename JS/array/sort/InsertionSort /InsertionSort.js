@@ -23,7 +23,7 @@ const array = [2, 4, 45, 12, 1, 3]
 const fun = (arr) => {
     for (let i = 1; i < arr.length; i++) {
         let temp = arr[i]
-        let j = j-1
+        let j = i-1
         for (; j >= 0; j--) {
             if (arr[j] > temp) {
                 arr[j+1] = arr[j]
