@@ -2,20 +2,20 @@ function findMissingNumbers(inputArray) {
   if (inputArray.length < 2) {
     return [];
   }
-  
+
   const minNum = Math.min(...inputArray);
   const maxNum = Math.max(...inputArray);
-  
-  const allNumbers = Array.from({ length: maxNum - minNum + 1 }, (_, i) => i + minNum);
+
+  // const allNumbers = Array.from({ length: maxNum - minNum + 1 }, (_, i) => i + minNum);
 
   //! above lines are easy way
-//   const allNumbers = [];
-//   for (let i = minNum; i <= maxNum; i++) {
-//     allNumbers.push(i);
-//   }s
-  
-  const missingNumbers = allNumbers.filter(num => !inputArray.includes(num));
-  
+  const allNumbers = [];
+  for (let i = minNum; i <= maxNum; i++) {
+    allNumbers.push(i);
+  }
+
+  const missingNumbers = allNumbers.filter((num) => !inputArray.includes(num));
+
   return missingNumbers;
 }
 
