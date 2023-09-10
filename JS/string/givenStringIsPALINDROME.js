@@ -1,13 +1,13 @@
-function isPalindrome(str) {
-  // Reverse the string and compare to original
-  const str1 = str.split("").reverse().join(""); //! here we are print the palindrome string
-  // const  str === str.split("").reverse().join("");   //! here we are checking palindrome or not
-  console.log("===str===>>", str1);
-}
+// function isPalindrome(str) {
+//   // Reverse the string and compare to original
+//   const str1 = str.split("").reverse().join(""); //! here we are print the palindrome string
+//   // const  str === str.split("").reverse().join("");   //! here we are checking palindrome or not
+//   console.log("===str===>>", str1);
+// }
 
 // Example usage
-console.log(isPalindrome("racecar")); // true
-console.log(isPalindrome("hello")); // false
+// console.log(isPalindrome("racecar")); // true
+// console.log(isPalindrome("hello")); // false
 
 // TODO we need to make a programs without using by default method
 
@@ -38,14 +38,12 @@ function isPalindrome(str) {
 
 // Example usage
 console.log(isPalindrome("MALAYALAM")); // Output: true
-console.log(isPalindrome("hello")); // Output: false
+// console.log(isPalindrome("hello")); // Output: false
 // console.log(isPalindrome("A man, a plan, a canal: Panama"));    // Output: true
 // console.log(isPalindrome("A"));    // Output: true
 
 /*
-choti muh badi bat
-mere ko project ke bare me utna jada pta nhi hai
-tho sir ye sab choti choti chize puchta raye ge
+
 point: https://workat.tech/company/google/interview-questions/problem-solving
 pascal's Triangle
 
