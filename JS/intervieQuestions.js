@@ -13,7 +13,7 @@ console.log("age:", age)
 for (var index = 0; index < 5; index++) {
     setTimeout(() => {
         console.log( index)
-    })
+    }, 1000*index)
 }
 
 // //QUESTION 3:-
@@ -30,7 +30,37 @@ for (let i = 0; i < arr.length; i++) {
   		}
 }
 
-Difference between Promise.all and Promise.allSettled
+const arr = [1, 2, 3, 1, 4, 2, 5, 6, 3];
+
+function removeDuplicates(arr) {
+  // Create a new array to hold unique elements
+  const uniqueArr = [];
+
+  // Outer loop through each element in the original array
+  for (let i = 0; i < arr.length; i++) {
+    let isDuplicate = false;
+
+    // Inner loop to check if the element is already in uniqueArr
+    for (let j = 0; j < uniqueArr.length; j++) {
+      if (arr[i] === uniqueArr[j]) {
+        isDuplicate = true;
+        break;
+      }
+    }
+
+    // If element is not a duplicate, add it to uniqueArr
+    if (!isDuplicate) {
+      uniqueArr.push(arr[i]);
+    }
+  }
+
+  return uniqueArr;
+}
+
+const uniqueArr = removeDuplicates(arr);
+console.log(uniqueArr); // Output: [1, 2, 3, 4, 5, 6]
+
+//!Difference between Promise.all and Promise.allSettled
 
 
 gusee what is the output
@@ -42,6 +72,7 @@ String to Number, Boolean to Number, etc. when different types of operators are 
 In case the behavior of the implicit conversion is not sure, the 
 constructors of a data type can be used to convert any value to that datatype,
 like the Number(), String() or Boolean() constructor.
+//!Shadowing in javascript
 
  */
 
@@ -126,7 +157,6 @@ myFun();
 // console.log("🚀 ~ getFullNameV2:", obj.getFullNameV2());
 // console.log("🚀 ~ getFullNameV3:", obj.getFullNameV3); // this is property not a functions
 // console.log("🚀 ~ getFullNameV3:", obj.getFullNameV3());
-
 
 //QUESTION 8:-
 const firstFun = {
