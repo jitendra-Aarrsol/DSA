@@ -72,7 +72,7 @@ String to Number, Boolean to Number, etc. when different types of operators are 
 In case the behavior of the implicit conversion is not sure, the 
 constructors of a data type can be used to convert any value to that datatype,
 like the Number(), String() or Boolean() constructor.
-//!Shadowing in javascript
+//! Shadowing in javascript
 
  */
 
@@ -226,7 +226,7 @@ output=[1,6,2,5,3,4]
 arr=[2,3,45,7,1,0] selection sort 
 
 arr = [1,2,33,100,9, -1] second lowest / greatest
-
+//lagest Number
 function secondLargest(arr){
   let result = {}
   for(let i=0; i<arr.length; i++){
@@ -239,7 +239,32 @@ function secondLargest(arr){
 }
 
 secondLargest(arr)
+**********Lowest Number************
+let arr = [1, 2, 33, 100, 9, -1];
 
+function findSecondLowest(arr) {
+    if (arr.length < 2) {
+        throw new Error("Array should contain at least two elements");
+    }
+
+    let firstLowest = Infinity;
+    let secondLowest = Infinity;
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] < firstLowest) {
+            secondLowest = firstLowest;
+            firstLowest = arr[i];
+        } else if (arr[i] < secondLowest && arr[i] != firstLowest) {
+            secondLowest = arr[i];
+        }
+    }
+
+    return secondLowest;
+}
+
+let secondLowest = findSecondLowest(arr);
+console.log(secondLowest); // Output: 1
+********************************
 
 arr= [1,4,5,6,88,0]
 output = ["1.1","4.4","5.5","6.6","88.8","0.0"]
